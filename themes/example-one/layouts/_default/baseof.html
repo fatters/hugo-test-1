@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        <div class="page">
+            <aside class="page__affiliates mr-1">
+                <a href="https://www.smithsofdrogheda.com/" title="Smiths of Drogheda" target="_blank" rel="noopener nofollow"><img src="/images/smiths.jpg" alt="Advertisement For Smiths of Drogheda"></a>
+                <a href="https://www.oreillyglass.ie/" title="O'Reilly Glass" target="_blank" rel="noopener nofollow"><img src="/images/oreilly.jpg" alt="Advertisement For O'Reilly Glass"></a>
+                <a href="https://www.facebook.com/people/Floor-Style/100063648426216/" title="Floor Style" target="_blank" rel="nopener nofollow"><img src="/images/floor-style.jpg" alt="Advertisement For Floor Style"></a>
+            </aside>
+            <main role="main">
+                <section class="page__search">
+                    <input class="page__search__input" type="search" aria-label="Search for articles on Drogheda Life" placeholder="Search for articles on Drogheda Life" />
+                    <button>Search</button>
+                </section>
+                {{- block "main" . }}{{- end }}
+            </main>
+            <aside class="page__today ml-1">
+                <div style="width: 165px; height: 600px; background-color: #c0c0c0"></div>
+            </aside>
+            {{- if ne .Title "News" -}}<div class="page__extras">{{ .Title }}</div>{{end}}
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
