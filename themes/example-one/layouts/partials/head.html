@@ -12,7 +12,13 @@
     {{ $title := print .Title " | " .Site.Title }}
     {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
     <title>{{ $title }}</title>
-    <meta name="description" content="{{ .Description }}">
+
+    {{ $description := .Description }}
+    {{ if $description }}
+        <meta name="description" content="{{ $description }}">
+    {{ else }}
+        <meta name="description" content="{{ $title }}">
+    {{ end }}
 
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/schema.html" . -}}

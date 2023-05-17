@@ -9,7 +9,7 @@ description: "This is a description right here"
 
 {{< dl-image path="Frank_Godfrey_Louth_01_1.jpg" caption="Frank Godfrey in very excited mood at his cottage in Donore. We're not sure if he's going to the match by donkety and cart but we wouldn't be surprised! Photos: Andy Spearman." >}}
 
-An Lú Abú says Frank
+__An Lú Abú says Frank__
 
 Tomorrow is the biggest sporting day in years for County Louth as the Wee County team face the Dubs in the Leinster Final.
 

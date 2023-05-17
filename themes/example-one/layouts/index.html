@@ -2,6 +2,7 @@
 
 {{ range first 1 .Site.RegularPages.ByPublishDate.Reverse }}
 <article>
+  <p>--- FRONT PAGE ---</p>
   <h1>{{ .Title }}</h1>
     {{ partial "metadata.html" . }}
     <a class="summary" href="{{ .RelPermalink }}">
