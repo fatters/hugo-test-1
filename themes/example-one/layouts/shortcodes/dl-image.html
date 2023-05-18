@@ -7,9 +7,18 @@
 {{- $msg1 := "The %q shortcode requires a parameter named %q. See %s" -}}
 {{- $msg2 := "The resource %q passed to the %q shortcode is not an image. See %s" -}}
 {{- $msg3 := "The resource %q passed to the %q shortcode could not be found. See %s" -}}
+{{- $msg4 := "No alt or caption has been provided for image with path %s. For accessibility, one of these must be provided." -}}
 
 {{ if not $path }}
   {{ errorf $msg1 .Name "path" .Position }}
+{{ end }}
+
+{{ if not $alt }}
+  {{ if not $caption }}
+    {{ errorf $msg4 $path }}
+  {{ else }}
+    {{ $alt = $caption }}
+  {{ end }}
 {{ end }}
 
 {{- with $i := resources.Get $path -}}

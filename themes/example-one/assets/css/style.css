@@ -667,7 +667,7 @@ figure {
 
 
 
-article * ~ *:not(.dl-meta-data, .dl-meta-data *),
+article * ~ *:not(.dl-meta-data, .dl-meta-data *):not(figcaption),
 article * ~ p {
   margin-top: 1rem;
 }

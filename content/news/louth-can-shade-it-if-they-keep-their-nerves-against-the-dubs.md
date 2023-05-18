@@ -27,7 +27,7 @@ Drogheda is not exactly a riot of colour just yet, but perhaps that reflects a n
 
 There can be no doubt though, if we get the result we want, that nervousness will change to utter joy in a heartbeat (or should that be a Hartebeat?) and the town will transform into a sea of red and white. 
 
-{{< dl-image path="Frank_Godfrey_Louth_02_1.jpg" >}}
+{{< dl-image path="Frank_Godfrey_Louth_02_1.jpg" alt="Frank Godfrey in front of Saint Laurence Gate" >}}
 
 Talking of colour, there is no more colourful character in Drogheda than former Mayor Frank Godfrey who, despite the fact that he was born in County Meath, is a lifelong Louth supporter.
 
