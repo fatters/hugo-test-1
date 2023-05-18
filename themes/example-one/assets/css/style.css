@@ -667,7 +667,7 @@ figure {
 
 
 
-article * ~ *,
+article * ~ *:not(.dl-meta-data, .dl-meta-data *),
 article * ~ p {
   margin-top: 1rem;
 }
@@ -705,6 +705,39 @@ article > picture img {
 
 
 
+.dl-meta-data {
+  font-size: 14px;
+}
+
+.dl-meta-data__tags {
+  overflow: hidden;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+
+  .dl-meta-data__authors p + p {
+    margin-top: 0.25rem;
+  }
+
+  .dl-meta-data__tags .dl-tag {
+    margin-top: 0.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .dl-meta-data__authors {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .dl-meta-data__authors p {
+    margin: 0;
+  }
+}
 
 
 
@@ -717,6 +750,21 @@ article > picture img {
 
 
 
+.dl-tag {
+  display: inline-block;
+  vertical-align: bottom;
+  background: black;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.dl-tag + .dl-tag {
+  margin-left: 0.5rem;
+}
 
 
 

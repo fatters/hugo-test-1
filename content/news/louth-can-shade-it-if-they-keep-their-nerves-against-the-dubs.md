@@ -1,6 +1,7 @@
 ---
 title: "Louth can shade it if they keep their nerves against the Dubs"
 date: 2023-05-15T11:01:30+01:00
+authors: ["Andy Spearman"]
 draft: false
 tags: ["Sport"]
 images: ["/images/Frank_Godfrey_Louth_01_1.jpg"]

@@ -1,1 +1,21 @@
-<p>Posted By Andy Spearman</p>
+{{ $authors := .Params.authors }}
+{{ $date := .Params.date }}
+{{ $tags := .Params.tags }}
+
+<div class="dl-meta-data">
+    {{ with $authors }}
+    <section class="dl-meta-data__authors">
+        <p>Written By {{ delimit $authors ", " }}</p>
+        <p>{{ $date | time.Format ":date_full" }}</p>
+    </section>
+    {{ end }}
+    {{ with $tags }}
+        {{ if (gt ($tags | len) 0) }}
+            <section class="dl-meta-data__tags">
+                {{ range $tags }}
+                    <a href="/tags/{{ . | lower }}" class="dl-tag">{{ . }}</a>
+                {{ end }}
+            </section>
+        {{ end }}
+    {{ end }}
+</div>
