@@ -6,8 +6,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+    {{ if $production }}
+        {{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ else }}
+        {{ $style := resources.Get "css/style.css" }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+    {{ end }}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;700&display=swap">
 
     {{ $title := print .Title " | " .Site.Title }}
